@@ -1,16 +1,6 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import "./App.css";
 import dictionary from "./dictionary";
-
-function isCharCode(charCode: number) {
-  if (
-    (charCode > 64 && charCode < 91) ||
-    (charCode > 96 && charCode < 123) ||
-    charCode == 8
-  )
-    return true;
-  return false;
-}
 
 function App() {
   const ref = useRef<HTMLParagraphElement | null>(null);
