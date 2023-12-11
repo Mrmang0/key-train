@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300;600;900&display=swap");
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  color: #f3f3f3;
+}
+
+body {
+  width: 100%;
+  background-color: #101010;
+  font-family: "Noto Sans Mono", monospace;
+}
+
+.fader {
+  position: relative;
+  -webkit-box-reflect: below 0 linear-gradient(transparent, #fafafa33);
+}
+
+.fader::after {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  content: "";
+  background: linear-gradient(
+    to right,
+    rgba(16, 16, 16, 1) 15%,
+    rgba(16, 16, 16, 0.3) 45%,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(16, 16, 16, 0.3) 55%,
+    rgba(16, 16, 16, 1) 85%
+  );
+}
+
+.wpm {
+  left: 47.9%;
+}
+
+.wpm::after {
+  content: "words per minute";
+  width: 300px;
+}
